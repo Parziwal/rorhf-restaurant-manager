@@ -1,0 +1,18 @@
+<h1><%= @restaurant.name %></h1>
+
+<p>Étterem címe: <%= @restaurant.address %></p>
+<p>Tulajdonos: Teszt Elek, teszt.elek@gmail.com</p>
+
+<h3>Leírás</h3>
+<p><%= @restaurant.description %></p>
+
+<h3>Étlap</h3>
+<div>
+    <% @foods.each do |food| %>
+        <a class="food-list-item">
+            <p style="float: right"><%= food.price %> Ft</p>
+            <h4><%= food.name %></h4>
+            <p><%= food.description %></p>
+        </a>
+    <% end %>
+</div>

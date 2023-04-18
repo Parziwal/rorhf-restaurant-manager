@@ -1,0 +1,20 @@
+<h1 style="float: left">Éttermeim</h1>
+<%= link_to 'Új étterem', new_restaurant_path, {:style => "float: right; margin: 20px 0px", :class => "button"} %>
+<table class="table">
+    <tr>
+        <th>Név</th>
+        <th>Cím</th>
+        <th>Leírás</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% @restaurants.each do |restaurant| %>
+        <tr>
+            <td><%= restaurant.name %></td>
+            <td><%= restaurant.address %></td>
+            <td><%= restaurant.description %></td>
+            <td><%= link_to 'Szerkesztés', edit_restaurant_path(restaurant) %></td>
+            <td><%= link_to 'Törlés', restaurant, method: :delete, data: { confirm: 'Biztos?' } %></td>
+        </tr>
+    <% end %>
+</table>

@@ -1,0 +1,7 @@
+<div class="navbar">
+    <div><%= link_to_unless_current("Kezdőlap", { controller: "home", action: "index" }) %></div>
+    <div><%= link_to_unless_current("Éttermeim", { controller: "restaurants", action: "index" }) %></div>
+    <div><%= link_to_unless_current("Étlapok", { controller: "foods", action: "index" }) %></div>
+    <div><%= link_to_unless_current("Profil", { controller: "users", action: "edit", id: 1 }) %></div>
+    <div><a>Kijelentkezés</a></div>
+</div>

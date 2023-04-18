@@ -1,0 +1,29 @@
+.restuarant-list-item {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.restuarant-list-item:hover {
+    background-color: #b9b9b9;
+    cursor: pointer;
+}
+
+.restuarant-list-item h3 {
+    margin: 0;
+}
+
+.food-list-item {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.food-list-item h4 {
+    margin: 0;
+}
+

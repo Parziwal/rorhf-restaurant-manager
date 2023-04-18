@@ -1,0 +1,11 @@
+<h1>Éttermek</h1>
+<div>
+    <% @restaurants.each do |restuarant| %>
+        <a class="restuarant-list-item" href="/home/1">
+            <h3><%= restuarant.name %></h3>
+            <p style='float: right'>Teszt Elek</p>
+            <p><%= restuarant.address %></p>
+            <p><%= restuarant.description %></p>
+        </a>
+    <% end %>
+</div>

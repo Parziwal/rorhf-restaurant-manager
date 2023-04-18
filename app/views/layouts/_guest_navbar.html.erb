@@ -1,0 +1,4 @@
+<div class="navbar">
+    <div><%= link_to_unless_current("Kezdőlap", { controller: "home", action: "index" }) %></div>
+    <div><%= link_to_unless_current("Bejelentkezés", { controller: "users", action: "new" }) %></div>
+</div>

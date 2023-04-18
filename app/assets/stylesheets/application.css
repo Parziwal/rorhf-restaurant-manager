@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    margin: 0px;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+  
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+  
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+/* Active/current link */
+.navbar div:not(:has(a)) {
+    float: left;
+    display: block;
+    padding: 14px 20px;
+    background-color: #666;
+    color: white;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 2.5rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}

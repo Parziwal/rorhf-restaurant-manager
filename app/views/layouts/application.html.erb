@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="page-container">
+      <% if logged_in %>
+        <%= render "layouts/user_navbar" %>
+      <% else %>
+        <%= render "layouts/guest_navbar" %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+
+      <div class="footer">
+        <h3>Étteremkezelő webalkalmazás, Készítette: Stedra Kristóf</h3>
+      </div>
+    </div>
   </body>
 </html>
