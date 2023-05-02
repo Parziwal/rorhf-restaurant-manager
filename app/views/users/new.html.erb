@@ -1,19 +1,19 @@
-<h1>Bejelentkezés</h1>
+<h1>Login</h1>
 <%= form_with url: login_users_path do |form| %>
     <div class="field">
-        <%= form.label "Email" %>
+        <%= form.label :email %>
         <%= form.text_field :email %>
     </div>
 
     <div class="field">
-        <%= form.label "Jelszó" %>
+        <%= form.label :password %>
         <%= form.password_field :password %>
     </div>
 
     <div class="actions">
-        <%= form.submit "Bejelentkezés" %>
+        <%= form.submit "Login" %>
     </div>
 <% end %>
 
-<h1>Regisztráció</h1>
+<h1>Registration</h1>
 <%= render 'form', user: @user %>

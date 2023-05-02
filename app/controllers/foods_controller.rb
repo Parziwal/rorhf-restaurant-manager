@@ -1,10 +1,6 @@
 class FoodsController < ApplicationController
   def index
-    @foods = [
-      Food.new(id: 1, name: "Étel 1", price: 2400, description: "Leírás..."),
-      Food.new(id: 2, name: "Étel 2", price: 2500, description: "Leírás..."),
-      Food.new(id: 3, name: "Étel 3", price: 2610, description: "Leírás..."),
-    ]
+    @foods = Food.all
   end
 
   def new

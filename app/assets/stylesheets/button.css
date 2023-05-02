@@ -12,3 +12,14 @@
 .button:active {
   background-color: #1b65fa;
 }
+
+.button.full-width {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button.right-align {
+  float: right;
+  margin: 20px 0px;
+}

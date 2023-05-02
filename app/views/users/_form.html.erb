@@ -14,7 +14,12 @@
         <%= form.password_field :password %>
     </div>
 
-    <div class="actions">
-        <%= form.submit "Mentés" %>
+    <div>
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation %>
+    </div>
+
+    <div>
+        <%= form.submit %>
     </div>
 <% end %>

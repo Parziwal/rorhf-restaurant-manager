@@ -1,4 +1,4 @@
-.restuarant-list-item {
+.restaurant-list-item {
     display: block;
     text-decoration: none;
     color: black;
@@ -6,12 +6,12 @@
     padding: 10px;
 }
 
-.restuarant-list-item:hover {
+.restaurant-list-item:hover {
     background-color: #b9b9b9;
     cursor: pointer;
 }
 
-.restuarant-list-item h3 {
+.restaurant-list-item h3 {
     margin: 0;
 }
 

@@ -1,25 +1,25 @@
 <%= form_with model: food do |form| %>
     <div>
-        <%= form.label "Étterem" %>
+        <%= form.label "Restaurant" %>
         <%= select_tag(:restaurant_id, '') %>
     </div>
 
     <div>
-        <%= form.label "Név" %>
+        <%= form.label :name %>
         <%= form.text_field :name %>
     </div>
 
     <div>
-        <%= form.label "Ár" %>
+        <%= form.label :price %>
         <%= form.number_field :price %>
     </div>
 
     <div>
-        <%= form.label "Leírás" %>
+        <%= form.label :description %>
         <%= form.text_area :description %>
     </div>
 
     <div>
-        <%= form.submit "Mentés" %>
+        <%= form.submit %>
     </div>
 <% end %>

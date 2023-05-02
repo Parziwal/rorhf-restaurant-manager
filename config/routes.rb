@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :foods
   resources :users do
     post :login, on: :collection
-    post :logout, on: :collection
+    get :logout, on: :collection
   end
 end

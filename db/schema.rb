@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_04_18_161342) do
   create_table "foods", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.decimal "price", precision: 10, scale: 2
     t.text "description"
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", null: false

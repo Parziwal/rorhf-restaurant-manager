@@ -1,22 +1,22 @@
-<h1 style="float: left">Ételek</h1>
-<%= link_to 'Új étel', new_food_path, {:style => "float: right; margin: 20px 0px", :class => "button"} %>
+<h1 class="left-align">Foods</h1>
+<%= link_to "New food", new_food_path, class: "button right-align" %>
 <table class="table">
     <tr>
-        <th>Étterem</th>
-        <th>Név</th>
-        <th>Ár</th>
-        <th>Leírás</th>
+        <th>Restaurant</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
         <th></th>
         <th></th>
     </tr>
     <% @foods.each do |food| %>
         <tr>
-            <td>Étterem 1</td>
+            <td><%= food.restaurant.name %></td>
             <td><%= food.name %></td>
             <td><%= food.price %></td>
             <td><%= food.description %></td>
-            <td><%= link_to 'Szerkesztés', edit_food_path(food) %></td>
-            <td><%= link_to 'Törlés', food, method: :delete, data: { confirm: 'Biztos?' } %></td>
+            <td><%= link_to "Edit", edit_food_path(food) %></td>
+            <td><%= link_to "Delete", food, method: :delete, data: { confirm: "Are you sure?" } %></td>
         </tr>
     <% end %>
 </table>
