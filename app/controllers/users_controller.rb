@@ -12,8 +12,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Successful registration'
       redirect_to root_path
     else
-      flash[:notice] = @user.errors.messages
-      redirect_to new_user_path
+      render :new, status: :unprocessable_entity
     end
   end
   
@@ -22,11 +21,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = 'Update successful'
+      flash[:notice] = 'Successful update'
       redirect_to edit_user_path
     else
-      flash[:notice] = "Could not update data"
-      redirect_to edit_user_path
+      render :edit, status: :unprocessable_entity
     end
   end
 

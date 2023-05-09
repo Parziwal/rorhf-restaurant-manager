@@ -1,4 +1,18 @@
 <%= form_with model: restaurant do |form| %>
+    <% if restaurant.errors.any? %>
+        <div class="error-message">
+            <h2><%= pluralize(restaurant.errors.count, "error") %> occured:</h2>
+
+            <ul>
+                <% restaurant.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= form.hidden_field :user_id, value: @user.id %>
+
     <div>
         <%= form.label :name %>
         <%= form.text_field :name %>

@@ -1,4 +1,16 @@
 <%= form_with model: user do |form| %>
+    <% if user.errors.any? %>
+        <div class="error-message">
+            <h2><%= pluralize(user.errors.count, "error") %> occured:</h2>
+
+            <ul>
+                <% user.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
     <div>
         <%= form.label :name %>
         <%= form.text_field :name %>
