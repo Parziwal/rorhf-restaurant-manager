@@ -11,7 +11,7 @@
     </tr>
     <% @foods.each do |food| %>
         <tr>
-            <td><%= food.restaurant.name %></td>
+            <td><%= link_to food.restaurant.name, home_path(food.restaurant) %></td>
             <td><%= food.name %></td>
             <td><%= food.price %></td>
             <td><%= food.description %></td>
