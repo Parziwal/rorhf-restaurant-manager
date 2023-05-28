@@ -1,13 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  price: 1
-  description: MyText
-  restaurant: one
+cheeseburger:
+  name: Cheeseburger
+  price: 10.99
+  description: Our classic burger with melted cheddar cheese
+  restaurant: burger
 
-two:
-  name: MyString
-  price: 1
-  description: MyText
-  restaurant: two
+classic_burger:
+  name: Classic Burger
+  price: 9.99
+  description: Our signature burger with lettuce, tomato, and pickles
+  restaurant: burger
+
+margherita_pizza:
+  name: Margherita Pizza
+  price: 12.99
+  description: Fresh mozzarella, tomato sauce, and basil
+  restaurant: pizza

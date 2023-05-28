@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address: MyString
-  description: MyText
-  user: one
+burger:
+  name: The Burger Joint
+  address: 123 Main St
+  description: The best burgers in town!
+  user: bob
 
-two:
-  name: MyString
-  address: MyString
-  description: MyText
-  user: two
+pizza:
+  name: Pizzeria Uno
+  address: 456 Elm St
+  description: Delicious Thai cuisine!
+  user: alice

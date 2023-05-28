@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  before_action :find_user_restaurants, only: [:new, :edit]
+  before_action :find_user_restaurants, only: [:new, :edit, :create, :update]
   before_action :check_restaurant_owner, only: [:create, :edit, :update]
 
   def index
@@ -51,8 +51,8 @@ class FoodsController < ApplicationController
     end
 
     def check_restaurant_owner
-      if params[:restaurant_id]
-        restaurant = Restaurant.find(params[:restaurant_id])
+      if params[:food] && params[:food][:restaurant_id]
+        restaurant = Restaurant.find(params[:food][:restaurant_id])
         if restaurant.user != @user
           flash[:notice] = 'Access denied'
           redirect_to foods_path
